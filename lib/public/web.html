@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="./webix/webix.css" type="text/css" charset="utf-8">
+        <script src="./webix/webix.js" type="text/javascript" charset="utf-8"></script>
+    </head>
+    <body>
+    <div id="areaA"></div>
+        <script type="text/javascript" charset="utf-8">
+        	function submit() {
+  webix.message(JSON.stringify($$("myForm").getValues(), null, 2));
+}
+webix.ready(function() {
+webix.ui({
+  // view: "form",
+  // id: "myForm",
+  // container: "areaA",
+  // width: 350,
+  // elements: [{
+  //   view: "text",
+  //   label: "Username",
+  //   name: "username"
+  // }, {
+  //   view: "text",
+  //   label: "Password",
+  //   name: "password",
+  //   type: "password"
+  // }, {
+  //   view: "checkbox",
+  //   labelRight: "I accept the terms of use",
+  //   name: "accept"
+  // }, {
+  //   view: "button",
+  //   value: "Submit",
+  //   width: 150,
+  //   align: "center",
+  //   click: submit
+  // }]
+
+  	view:"window",
+	height:250,
+	width:300,
+	left:50, top:50,
+	move:true,
+    id:"my_win",
+    head:"My Window",
+    body:{
+        "view": "form",
+  "elements": [
+    {
+      "view": "text",
+      "name": "To",
+      "label": "To",
+      "labelWidth": "100"
+    }
+  ]
+    }
+}).show();
+})
+
+        </script>
+    </body> 
+</html>
