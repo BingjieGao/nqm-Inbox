@@ -4,7 +4,10 @@ html
         link(rel='stylesheet', href='webix/webix.css', type='text/css', media='screen', charset='utf-8')
         script(src='webix/webix.js', type='text/javascript', charset='utf-8')
         script.
+            webix.require.disabled = true;
             webix.codebase = "http://cdn.webix.com/components/tinymce/";
+        script(src="http://cdn.webix.com/components/tinymce/tinymce.js")
+        script(src="http://cdn.webix.com/components/tinymce/tinymce/tiny_mce.js")
         script.
             var data=!{JSON.stringify(messages)};
         script(src="js/inbox.js")
