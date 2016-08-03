@@ -9,7 +9,10 @@ html
         script(src="http://cdn.webix.com/components/tinymce/tinymce.js")
         script(src="http://cdn.webix.com/components/tinymce/tinymce/tiny_mce.js")
         script.
-            var data=!{JSON.stringify(messages)};
+            //console.log(JSON.stringify(messages));
+            var gData=!{JSON.stringify(messages)};
+            console.log(gData);
+
         script(src="js/inbox.js")
     body
         <div id="viewmessage" style='display:none;'>No message selected from account.</div>

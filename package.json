@@ -9,6 +9,7 @@
   "author": "toby.ealden@gmail.com",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.15.2",
     "minimist": "^1.2.0"
   }
 }
