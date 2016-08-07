@@ -5,32 +5,32 @@ html
         script(src='webix/webix.js', type='text/javascript', charset='utf-8')
         script(type='text/javascript').
             var onLoginClick = function () {
-                window.location.replace("https://accounts.google.com/o/oauth2/auth?scope=https://www.googleapis.com/auth/gmail.modify&redirect_uri=http://localhost:3000/oauthCB&response_type=code&client_id=593156495033-lhtutacl11bqq7ed2diobk7ti9u3vcph.apps.googleusercontent.com&access_type=offline");
+                window.location.replace("https://accounts.google.com/o/oauth2/auth?scope=https://mail.google.com/&redirect_uri=http://localhost:3000/oauth2callback&response_type=code&client_id=34234327356-ouiojrg05qps9sp0dtgca5mmo9r3n8e5.apps.googleusercontent.com&approval_prompt=force&access_type=offline");
             };
-        
+
             var ui = {
-                type: "space",
-                rows: [
-                    {},
-                    {
-                        cols: [
-                            {},
-                            {
-                                id:         "loginButton",
-                                view:       "button",
-                                type:       "iconButton",
-                                icon:       "sign-in",
-                                label:      "login with google",
-                                inputWidth: 200,
-                                click:      onLoginClick
-                            },
-                            {}
-                        ]
-                    },
-                    {},
-                ]
-            };
-            
+                view:"window",
+                height:250,
+                width:300,
+                position:"center",
+                head:{
+                view:"toolbar", cols:[
+                    {view:"label", label: "SECD EMAIL LOGIN" }]
+                },
+                body: {
+
+                        id:         "loginButton",
+                        view:       "button",
+                        type:       "iconButton",
+                        icon:       "sign-in",
+                        label:      "login with google",
+                        inputWidth: 200,
+                        align:"center",
+                        click:      onLoginClick
+                 }
+
+            }
             webix.ready(function() {
-                webix.ui(ui);
+                webix.ui(ui).show();
             });
+
